@@ -77,6 +77,8 @@ m2 = rho*(r2+wL)*wL*dL;
 m3 = rho*(r3+wL)*wL*dL;
 m4 = rho*(r4+wL)*wL*dL;
 m5 = rho*(r5+wL)*wL*dL;
+m6 = rho*(r6+wL)*wL*dL;
+
 
 % Calculate moments of inertia
 i1 = 0;
