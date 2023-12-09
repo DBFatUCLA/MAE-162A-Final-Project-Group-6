@@ -111,15 +111,15 @@ for t = tmin:step:tmax
     CoMFull(i,1) = CoM; % vertical deflection of table
     t6Full(i,1) = t6;
 
-    %Troubleshooting
-    fprintf('t2 = %1.5f, t3 = %1.5f, t4 = %1.5f\n t5 = %1.5f, t6 = %1.5f\n',...
-             180*t2/pi,  180*t3/pi,  t4*180/pi,  180*t5/pi,  180*t6/pi);
-    fprintf('CoM = %1.5f\n', CoM)
+    % %Troubleshooting
+    % fprintf('t2 = %1.5f, t3 = %1.5f, t4 = %1.5f\n t5 = %1.5f, t6 = %1.5f\n',...
+    %          180*t2/pi,  180*t3/pi,  t4*180/pi,  180*t5/pi,  180*t6/pi);
+    % fprintf('CoM = %1.5f\n', CoM)
 end
-vert = max(CoMFull) - min(CoMFull)
-t6min = min(t6Full)*180/pi
-t6max = max(t6Full)*180/pi
-hzn = max(dflFull) - min(dflFull)
+vert = max(CoMFull) - min(CoMFull);
+t6min = min(t6Full)*180/pi;
+t6max = max(t6Full)*180/pi;
+hzn = max(dflFull) - min(dflFull);
 
 figure(1)
 plot(t2Full, dflFull)
@@ -172,7 +172,7 @@ for t = tmin:step:tmax
     t5init = t5;
     t6init = t6;
 
-    [torque] = PowerAnalysis(A, tmax, tmin, w, t(n), r15, r5, r6, t1, t2(n), t3(n), t4(n), t5(n), t6(n));
+    torque = PowerAnalysis(A, tmax, tmin, w, t, r15, r5, r6, t1, t2, t3, t4, t5, t6);
     % Store values
     torque(i,1) = torque;
 
